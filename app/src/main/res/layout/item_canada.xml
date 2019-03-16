@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_background"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:id="@+id/txt_title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#224C72"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_description_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#242a30"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/img_imageHref_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_id" />
+
+        <ImageView
+            android:id="@+id/img_imageHref_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_description_id"
+            app:layout_constraintEnd_toStartOf="@+id/img_chevronright_id"
+            app:layout_constraintStart_toEndOf="@+id/txt_description_id"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_id" />
+
+        <ImageView
+            android:id="@+id/img_chevronright_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chevron_right"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_description_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_id" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
